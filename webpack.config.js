@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = function (env, argsObject) {
 	return {
-		entry: "./source/index.jsx",
+		entry: "./index.jsx",
 		output: {
 			path: path.resolve(__dirname, argsObject.mode || "build"),
 			filename: "index.js"
@@ -25,9 +25,7 @@ module.exports = function (env, argsObject) {
 				"@": path.resolve(__dirname)
 			},
 			extensionAlias: {
-				".js": [".js", ".ts"],
-				".cjs": [".cjs", ".cts"],
-				".mjs": [".mjs", ".mts"]
+				".js": [".js", ".ts"]
 			}
 		},
 		stats: {
