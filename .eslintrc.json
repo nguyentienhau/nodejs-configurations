@@ -25,9 +25,10 @@
 		"linebreak-style": ["error", "windows"],
 		"quotes": ["error", "double"],
 		"semi": ["error", "always"],
+		"no-unused-vars": ["error", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
 		"react/react-in-jsx-scope": "off",
 		"spellcheck/spell-checker": [
-			"warn",
+			"error",
 			{
 				"comments": true,
 				"strings": true,
