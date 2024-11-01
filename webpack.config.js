@@ -25,9 +25,7 @@ module.exports = function (env, argsObject) {
 				"@": path.resolve(__dirname)
 			},
 			extensionAlias: {
-				".js": [".js", ".ts"],
-				".cjs": [".cjs", ".cts"],
-				".mjs": [".mjs", ".mts"]
+				".js": [".js", ".ts"]
 			}
 		},
 		stats: {

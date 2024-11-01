@@ -21,10 +21,11 @@
 	},
 	"plugins": ["react", "spellcheck"],
 	"rules": {
-		"indent": ["error", "tab", { "SwitchCase": 1 }],
-		"linebreak-style": ["error", "windows"],
-		"quotes": ["error", "double"],
-		"semi": ["error", "always"],
+		"indent": ["warn", "tab", { "SwitchCase": 1 }],
+		"linebreak-style": ["warn", "windows"],
+		"quotes": ["warn", "double"],
+		"semi": ["warn", "always"],
+		"no-unused-vars": ["warn", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
 		"react/react-in-jsx-scope": "off",
 		"spellcheck/spell-checker": [
 			"warn",
@@ -33,7 +34,7 @@
 				"strings": true,
 				"identifiers": true,
 				"lang": "en_US",
-				"skipWords": ["mysql", "sequelize", "readdir", "webpack", "jsx", "tsx", "cjs", "mjs", "cts", "mts"],
+				"skipWords": ["mysql", "sequelize", "readdir", "webpack", "jsx", "tsx"],
 				"skipIfMatch": ["http://[^s]*"],
 				"skipWordIfMatch": ["^foobar.*$"],
 				"minLength": 3

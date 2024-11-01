@@ -1,9 +1,6 @@
 {
 	"name": "nodejs-configurations",
 	"version": "1.0.0",
-	"author": "Nguyen Tien Hau",
-	"license": "ISC",
-	"main": "index.js",
 	"scripts": {
 		"lint:check": "eslint **/*.{js,jsx,ts,tsx}",
 		"lint:fix": "eslint **/*.{js,jsx,ts,tsx} --fix",
