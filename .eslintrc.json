@@ -1,0 +1,76 @@
+{
+	"env": {
+		"browser": true,
+		"es2022": true,
+		"commonjs": true,
+		"node": true
+	},
+	"ignorePatterns": ["**/node_modules"],
+	"globals": { "WIKI_LINK": "readonly" },
+	"parserOptions": {
+		"ecmaFeatures": { "jsx": true },
+		"ecmaVersion": 2022,
+		"sourceType": "module"
+	},
+	"plugins": ["react", "spellcheck", "import"],
+	"extends": ["eslint:recommended", "plugin:react/recommended", "plugin:import/recommended"],
+	"settings": {
+		"react": { "version": "detect" },
+		"import/resolver": {
+			"node": { "extensions": [".js", ".jsx", ".ts", ".tsx"] },
+			"alias": { "map": [["@frontend", "./frontend"]] }
+		}
+	},
+	"rules": {
+		"indent": ["warn", "tab", { "SwitchCase": 1 }],
+		"linebreak-style": ["warn", "windows"],
+		"quotes": ["warn", "double", { "allowTemplateLiterals": true }],
+		"semi": ["warn", "always"],
+		"no-unused-vars": ["warn", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
+		"no-console": ["warn", { "allow": ["warn", "error"] }],
+		"default-param-last": "warn",
+		"no-undefined": "warn",
+		"react/react-in-jsx-scope": ["off"],
+		"react/prop-types": ["warn"],
+		"import/no-unresolved": ["error"],
+		"import/named": ["error"],
+		"import/default": ["error"],
+		"import/namespace": ["error"],
+		"import/no-duplicates": ["warn"],
+		"import/order": [
+			"warn",
+			{
+				"groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+				"alphabetize": { "order": "asc", "caseInsensitive": true },
+				"newlines-between": "never"
+			}
+		],
+		"import/newline-after-import": ["warn", { "count": 1 }],
+		"import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+		"import/no-named-as-default-member": ["off"],
+		"spellcheck/spell-checker": [
+			"warn",
+			{
+				"comments": true,
+				"strings": true,
+				"identifiers": true,
+				"lang": "en_US",
+				"skipWords": [
+					"sequelize",
+					"readdir",
+					"webpack",
+					"jsx",
+					"tsx",
+					"upsert",
+					"argv",
+					"utf8",
+					"timestamps",
+					"charset"
+				],
+				"skipIfMatch": ["http://[^s]*"],
+				"skipWordIfMatch": ["^foobar.*$"],
+				"minLength": 3
+			}
+		]
+	}
+}
