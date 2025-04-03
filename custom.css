@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+	margin: 0rem;
+	padding: 0rem;
+	color: inherit;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: inherit;
+	border-style: solid;
+	border-width: 0rem;
+	scroll-behavior: smooth;
+	scrollbar-width: auto;
+	scrollbar-color: auto;
+}
+
+::-webkit-scrollbar {
+	width: 0.5rem;
+	height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #aaaaaa;
+}
+
+::placeholder {
+	color: #eeeeee;
+}
