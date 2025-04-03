@@ -1,0 +1,51 @@
+{
+	"name": "project",
+	"version": "1.0.0",
+	"scripts": {
+		"lint:check": "eslint **/*.{js,jsx,ts,tsx}",
+		"lint:fix": "eslint **/*.{js,jsx,ts,tsx} --fix",
+		"format:check": "prettier . --check",
+		"format:fix": "prettier . --write",
+		"database:init": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+		"database:update": "sequelize db:migrate && sequelize db:seed:all",
+		"frontend:dev": "webpack --mode=development --watch",
+		"frontend:build": "webpack --mode=production",
+		"frontend:serve": "webpack serve --mode=development",
+		"backend:dev": "set NODE_PATH=.&& nodemon index.js --mode=development",
+		"backend:serve": "set NODE_PATH=.&& node index.js --mode=production",
+		"test": "webpack configtest && prettier . --check && eslint **/*.{js,jsx,ts,tsx}",
+		"compile": "tsc",
+		"nodemon": "nodemon"
+	},
+	"dependencies": {
+		"mysql2": "^3.14.1",
+		"sequelize": "^6.37.7"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.27.1",
+		"@babel/preset-env": "^7.27.1",
+		"@babel/preset-react": "^7.27.1",
+		"@types/node": "^22.15.3",
+		"babel-loader": "^9.2.1",
+		"css-loader": "^7.1.2",
+		"eslint": "^8.57.1",
+		"eslint-import-resolver-alias": "^1.1.2",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-react": "^7.37.5",
+		"eslint-plugin-spellcheck": "^0.0.20",
+		"file-loader": "^6.2.0",
+		"html-webpack-plugin": "^5.6.3",
+		"nodemon": "^3.1.10",
+		"prettier": "^3.5.3",
+		"sequelize-cli": "^6.6.2",
+		"style-loader": "^3.3.4",
+		"ts-loader": "^9.5.2",
+		"typescript": "^5.8.3",
+		"webpack": "^5.99.7",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.2.1"
+	},
+	"workspaces": [
+		"/*"
+	]
+}
